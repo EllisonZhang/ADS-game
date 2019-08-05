@@ -53,7 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scenes\Asd.cs" />
+     <Compile Include="Assets\Scripts\AnswerData.cs" />
+     <Compile Include="Assets\Scripts\DataController.cs" />
+     <Compile Include="Assets\Scripts\MenuScreenController.cs" />
+     <Compile Include="Assets\Scripts\QuestionData.cs" />
+     <Compile Include="Assets\Scripts\RoundData.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/FinalProject/ADS-game/Game_App/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
