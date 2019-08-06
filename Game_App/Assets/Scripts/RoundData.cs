@@ -5,9 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class RoundData 
 {
-   public string name;
-   public int timeLimitInseconds;
+   [SerializeField] private string name;
+   [SerializeField] public int timeLimitInSeconds;
    public int pointAddedForCorrectAnswer;
-   public QuestionData[] questions;
+   [SerializeField] public QuestionData[] questions;
 
 }

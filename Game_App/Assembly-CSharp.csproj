@@ -53,11 +53,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AnswerButton.cs" />
      <Compile Include="Assets\Scripts\AnswerData.cs" />
      <Compile Include="Assets\Scripts\DataController.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\MenuScreenController.cs" />
      <Compile Include="Assets\Scripts\QuestionData.cs" />
      <Compile Include="Assets\Scripts\RoundData.cs" />
+     <Compile Include="Assets\Scripts\SimpleObjectPool.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/FinalProject/ADS-game/Game_App/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

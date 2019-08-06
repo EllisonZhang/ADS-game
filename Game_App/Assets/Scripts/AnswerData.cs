@@ -5,7 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class AnswerData
 {
-  public string answerText;
-  public bool inCorrect;
- 
+  [SerializeField] public string answerText;
+  [SerializeField] private bool isCorrect;
 }
