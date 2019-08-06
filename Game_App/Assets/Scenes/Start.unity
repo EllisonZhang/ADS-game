@@ -143,35 +143,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allRoundData:
   - name: Round Zero
-    timeLimitInseconds: 30
+    timeLimitInSeconds: 10
     pointAddedForCorrectAnswer: 10
     questions:
     - questionText: What's the fuck?
       answers:
       - answerText: 1
-        inCorrect: 1
+        isCorrect: 1
       - answerText: 2
-        inCorrect: 0
+        isCorrect: 0
       - answerText: 3
-        inCorrect: 0
+        isCorrect: 0
       - answerText: 4
-        inCorrect: 0
+        isCorrect: 0
     - questionText: what do i eat
       answers:
       - answerText: grass
-        inCorrect: 0
+        isCorrect: 0
       - answerText: meat
-        inCorrect: 1
+        isCorrect: 1
       - answerText: asd
-        inCorrect: 0
+        isCorrect: 0
       - answerText: lalal
-        inCorrect: 0
+        isCorrect: 0
     - questionText: sdfg
       answers:
       - answerText: sdf
-        inCorrect: 1
+        isCorrect: 1
       - answerText: sdf
-        inCorrect: 0
+        isCorrect: 0
 --- !u!4 &41359528
 Transform:
   m_ObjectHideFlags: 0

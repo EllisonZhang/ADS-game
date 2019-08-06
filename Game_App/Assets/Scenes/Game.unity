@@ -236,10 +236,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   answerButtonGameObjectPool: {fileID: 552168288}
   questionDisplayText: {fileID: 1386709930}
-  scoreDisplayText: {fileID: 0}
+  timeDisplayText: {fileID: 1649645302}
+  scoreDisplayText: {fileID: 1558017208}
   answerButtonParent: {fileID: 476948250}
-  questionDisplay: {fileID: 0}
-  roundEndDisplay: {fileID: 0}
+  questionDisplay: {fileID: 1589147332}
+  roundEndDisplay: {fileID: 1861584503}
 --- !u!1 &476948249
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +431,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 979558529}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 375189175}
+        m_MethodName: ReturnToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &979558529
@@ -659,7 +671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 647, y: -26.649994}
+  m_AnchoredPosition: {x: 657, y: -26.65}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558017208
@@ -814,7 +826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -696, y: -26.65}
+  m_AnchoredPosition: {x: -696, y: -26.649994}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1649645302

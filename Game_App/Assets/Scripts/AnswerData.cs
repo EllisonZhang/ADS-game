@@ -6,5 +6,5 @@ using UnityEngine;
 public class AnswerData
 {
   [SerializeField] public string answerText;
-  [SerializeField] private bool isCorrect;
+  [SerializeField] public bool isCorrect;
 }

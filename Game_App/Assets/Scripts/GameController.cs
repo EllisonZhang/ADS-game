@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     private int playerScore;
     public SimpleObjectPool answerButtonGameObjectPool;
     public Text questionDisplayText;
+    public Text timeDisplayText;
     public Text scoreDisplayText;
     public Transform answerButtonParent;
     public GameObject questionDisplay;
@@ -31,10 +32,9 @@ public class GameController : MonoBehaviour
         questionPool = currentRoundData.questions;
 
         timeRemaining = currentRoundData.timeLimitInSeconds;
-
+        UpdataTimeRemainingDisplay();
         playerScore = 0;
         questionIndex = 0;
-
         ShowQuestion();
         isRoundActivate = true;
 
@@ -68,7 +68,7 @@ public class GameController : MonoBehaviour
 
         if(isCorrect){
             playerScore += currentRoundData.pointAddedForCorrectAnswer;
-            scoreDisplayText.text = "Score" + playerScore.ToString();
+            scoreDisplayText.text = "Score: " + playerScore.ToString();
         }
         if(questionPool.Length>questionIndex+1){
             questionIndex++;
@@ -83,9 +83,27 @@ public class GameController : MonoBehaviour
         questionDisplay.SetActive(false);
         roundEndDisplay.SetActive(true);
     }
+
+    public void ReturnToMenu(){
+        SceneManager.LoadScene("Menu");
+    }
+
+    private void UpdataTimeRemainingDisplay(){
+      
+        timeDisplayText.text = "Time: " + Mathf.Round (timeRemaining).ToString();
+
+    }
     // Update is called once per frame
     void Update()
     {
-        
+        if(isRoundActivate){
+            timeRemaining -= Time.deltaTime;
+            UpdataTimeRemainingDisplay();
+
+            if(timeRemaining<= 0f){
+
+                 EndRound();
+            }
+        }
     }
 }

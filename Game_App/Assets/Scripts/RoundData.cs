@@ -6,7 +6,7 @@ using UnityEngine;
 public class RoundData 
 {
    [SerializeField] private string name;
-   [SerializeField] public int timeLimitInSeconds;
+   [SerializeField] public int timeLimitInSeconds = 10;
    public int pointAddedForCorrectAnswer;
    [SerializeField] public QuestionData[] questions;
 

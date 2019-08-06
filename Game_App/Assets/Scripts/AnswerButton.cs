@@ -8,9 +8,10 @@ public class AnswerButton : MonoBehaviour
     public Text answerText;
     private AnswerData answerData;
     // Start is called before the first frame update
+    private GameController gameController;
     void Start()
     {
-        
+        gameController = FindObjectOfType<GameController>();
     }
 
     public void SetUp(AnswerData data)
@@ -18,9 +19,11 @@ public class AnswerButton : MonoBehaviour
         answerData = data;
         answerText.text = answerData.answerText;
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
+    
+    public void HandleClick(){
+
+        gameController.AnswerButtonClicked (answerData.isCorrect);
+
     }
+
 }
