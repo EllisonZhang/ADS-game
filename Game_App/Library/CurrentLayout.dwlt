@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 85
+  controlID: 13
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 86
+  controlID: 14
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -263,15 +263,15 @@ MonoBehaviour:
     y: 0
     width: 1187
     height: 573
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,20 +336,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/StreamingAssets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/StreamingAssets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\FinalProject\ADS-game\Game_App
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f0090000
-    m_LastClickedID: 2544
-    m_ExpandedIDs: 0000000066090000b4090000
+    m_SelectedIDs: d42b0000
+    m_LastClickedID: 11220
+    m_ExpandedIDs: 0000000066090000b4090000800b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -496,9 +496,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: caeeffff
       m_LastClickedID: 0
-      m_ExpandedIDs: 10e4ffff3ce4ffff0ae9ffff60e9ffff70e9ffff7ce9ffff8ce9ffff44eaffffe4eafffff6eaffff02ecffffe6ecffff1eefffffbaf0ffff5ef1ffffc0f1ffffcaf1ffff92f2ffffb0f2ffff86f5ffff1af7ffff6af8fffff8f9ffffa6faffff8cfbffffd6fbffffb8280000e0280000aa2a0000d22a0000dc2d0000f42d00000c2e00001c2e000096300000ae300000c6300000d6300000e0300000ae320000043500003635000040350000fe37000026380000fc390000243a0000
+      m_ExpandedIDs: caeeffff50efffff9af1ffff42f2ffff96f7ffff4ef8ffff5cf8ffff64f8ffffeef8ffffd6fbffffde2d0000e82d000000330000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -553,9 +553,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 525.45825, y: 286.3369, z: 13.104466}
+    m_Target: {x: 959.32117, y: 163.85596, z: 10.375}
     speed: 2
-    m_Value: {x: 525.45825, y: 286.3369, z: 13.104466}
+    m_Value: {x: 959.32117, y: 163.85596, z: 10.375}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -587,9 +587,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 644.6114
+    m_Target: 1008.0778
     speed: 2
-    m_Value: 644.6114
+    m_Value: 1008.0778
   m_Ortho:
     m_Target: 1
     speed: 2
