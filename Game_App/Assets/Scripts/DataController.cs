@@ -54,7 +54,7 @@ public class DataController : MonoBehaviour
         
         string filePath = Path.Combine(Application.streamingAssetsPath, gameDataFileName);
 
-        if(File.Exists(filePath)){
+        if(File.Exists(filePath)){ 
             
             // read and store the json serialized content in "dataAsJson"
             string dataAsJson = File.ReadAllText(filePath);
