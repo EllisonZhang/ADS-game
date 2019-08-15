@@ -141,37 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7509ce0d7508b9342a1188bf3c4b2d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allRoundData:
-  - name: Round Zero
-    timeLimitInSeconds: 10
-    pointAddedForCorrectAnswer: 10
-    questions:
-    - questionText: "\u300A\u96F7\u795E\u4E09\u300B\u4E2D\u7684\u53CD\u6D3E\u6B7B\u4EA1\u5973\u795E\u662F"
-      answers:
-      - answerText: "\u6D1B\u57FA"
-        isCorrect: 0
-      - answerText: "\u9A6C\u7279\u8FBE\u8499"
-        isCorrect: 0
-      - answerText: "\u6D77\u62C9"
-        isCorrect: 1
-      - answerText: "\u5965\u4E01"
-        isCorrect: 0
-    - questionText: "\u5E03\u9C81\u65AF\u73ED\u7EB3\u4E3A\u4EC0\u4E48\u4F1A\u53D8\u6210\u5DE8\u4EBA"
-      answers:
-      - answerText: "\u6CE8\u5C04SR-53"
-        isCorrect: 0
-      - answerText: "\u4F3D\u9A6C\u5C04\u7EBF\u8F90\u5C04"
-        isCorrect: 1
-      - answerText: "\u541E\u4E0B\u4E86\u5B87\u5B99\u9B54\u65B9"
-        isCorrect: 0
-      - answerText: lalal
-        isCorrect: 0
-    - questionText: "\u94A2\u94C1\u4FA0\u5728\u54EA\u90E8\u7535\u5F71\u4E2D\u5411\u5C0F\u8FA3\u6912\u6C42\u5A5A"
-      answers:
-      - answerText: "\u8718\u86DB\u4FA0\uFF1A\u82F1\u96C4\u5F52\u6765"
-        isCorrect: 1
-      - answerText: "\u94A2\u94C1\u4FA03"
-        isCorrect: 0
 --- !u!4 &41359528
 Transform:
   m_ObjectHideFlags: 0

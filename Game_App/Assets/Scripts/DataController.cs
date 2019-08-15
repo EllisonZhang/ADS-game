@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using Photon.Pun;
 
 [System.Serializable]
 public class DataController : MonoBehaviour
@@ -68,5 +69,7 @@ public class DataController : MonoBehaviour
             Debug.LogError("Cannot load game data!");
         }
     }
+
+    
     
 }

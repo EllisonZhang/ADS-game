@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/games/AdsGame0.00/AdsGame.exe
+C:/games/AdsGame0.31SyscScoreTest/AdsGame.exe
 SceneListBegin?
 Assets/Scenes/Start.unity
 Assets/Scenes/Menu.unity
@@ -178,6 +178,7 @@ c656dcc13ae391b68d594cc8f9c590b0 Assembly-CSharp.dll:Photon.Pun.Demo.Cockpit.Clo
 ee84478990d29c6d64a8d3003b44725c Assembly-CSharp.dll:Photon.Pun.Demo.Asteroids.PlayerOverviewPanel
 7602c8d40ade510f4c0e781c7062b246 Assembly-CSharp.dll:.ChannelSelector
 58f2afabd5040e886cc4670a75b8765c PhotonUnityNetworking.Utilities.dll:Photon.Pun.UtilityScripts.StatesGui
+63a4f4f029e179b00b6cb79637de126b Assembly-CSharp.dll:.PhotonLobby
 0927e41b46e1bd11671f9b5adda4b832 PhotonUnityNetworking.dll:Photon.Pun.PhotonRigidbodyView
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.IgnoreUiRaycastWhenInactive
 18d89cb858d0cf8a1f38bb786789eaa7 Assembly-CSharp.dll:.ChatAppIdCheckerUI
@@ -307,4 +308,4 @@ c8283c7732e3b6aa70d28f1fed4430ca PhotonUnityNetworking.Utilities.dll:Photon.Pun.
 f07d654754d37f82934d9057c671e9cc Assembly-CSharp.dll:Photon.Pun.Demo.Cockpit.Forms.UserIdUiForm
 c656dcc13ae391b68d594cc8f9c590b0 Assembly-CSharp.dll:Photon.Pun.Demo.Cockpit.CountOfRoomsProperty
 f0c4eb24258257daca58a9939f0894d2 Assembly-CSharp.dll:Photon.Pun.Demo.Asteroids.LobbyTopPanel
-63a4f4f029e179b00b6cb79637de126b Assembly-CSharp.dll:.PhotonLobby
+4e0e8c305a36ed40511c0df22fbbb7d4 Assembly-CSharp.dll:.PhotonRoom

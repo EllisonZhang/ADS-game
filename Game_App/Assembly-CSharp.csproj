@@ -171,6 +171,7 @@
      <Compile Include="Assets\Scripts\GameData.cs" />
      <Compile Include="Assets\Scripts\MenuScreenController.cs" />
      <Compile Include="Assets\Scripts\Photon\PhotonLobby.cs" />
+     <Compile Include="Assets\Scripts\Photon\PhotonRoom.cs" />
      <Compile Include="Assets\Scripts\PlayerData.cs" />
      <Compile Include="Assets\Scripts\QuestionData.cs" />
      <Compile Include="Assets\Scripts\RoundData.cs" />
