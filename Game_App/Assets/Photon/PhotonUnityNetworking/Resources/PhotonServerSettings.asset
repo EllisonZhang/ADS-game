@@ -32,5 +32,6 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
+  - RPC_SetupScoreBoard
   DisableAutoOpenWizard: 1
   ShowSettings: 1

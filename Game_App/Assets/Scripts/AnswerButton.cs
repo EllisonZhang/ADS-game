@@ -9,6 +9,7 @@ public class AnswerButton : MonoBehaviour
     private AnswerData answerData;
     // Start is called before the first frame update
     private GameController gameController;
+
     void Start()
     {
         gameController = FindObjectOfType<GameController>();
@@ -25,5 +26,6 @@ public class AnswerButton : MonoBehaviour
         gameController.AnswerButtonClicked (answerData.isCorrect);
 
     }
+    
 
 }

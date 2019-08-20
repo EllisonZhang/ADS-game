@@ -34,7 +34,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     }
     void Start()
     {
-        PV.GetComponent<PhotonView>();
+        PV = GetComponent<PhotonView>();
     }
 
     public override void OnEnable(){
@@ -63,11 +63,10 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         playersInRoom = photonPlayers.Length;
         myNumberInRoom = playersInRoom;
         PhotonNetwork.NickName = myNumberInRoom.ToString();
-        // PhotonNetwork.LoadLevel("Loading Screen");
-
-        StartGame();
+        // PhotonNetwork.LoadLevel("Loading Screen");    
         
     }
+
 
     public void StartGame(){
 
@@ -75,7 +74,16 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
             return;
         }
 
-        PhotonNetwork.LoadLevel(multiplayerScene);
+        // PhotonNetwork.LoadLevel(multiplayerScene);
+        PhotonNetwork.LoadLevel(3);
+    }
+    public override void OnPlayerEnteredRoom(Player otherPlayer){
+        Debug.Log("PLayer entered room");
+
+        if(PhotonNetwork.IsMasterClient){
+        Debug.Log("PLayer entered MasterClient room");
+        StartGame();
+        }
     }
     void OnSceneFinishedLoading(Scene scene,LoadSceneMode mode){
 
@@ -85,12 +93,16 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         }
     }
 
-    private void CreatePlayer(){
+    void CreatePlayer(){
 
         PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs","PhotonNetWorkPlayer"),
             transform.position,Quaternion.identity,0);
     }
 
-
-
+    
 }
+
+
+
+
+

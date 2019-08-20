@@ -10,8 +10,8 @@ using Photon.Pun;
 public class GameController : MonoBehaviourPunCallbacks, IPunObservable
 {
     private DataController dataController;
-    private RoundData currentRoundData;
-    private QuestionData[] questionPool;
+    public RoundData currentRoundData;
+    public QuestionData[] questionPool;
     private bool isRoundActivate;
     private float timeRemaining;
     private int questionIndex;
@@ -31,7 +31,14 @@ public class GameController : MonoBehaviourPunCallbacks, IPunObservable
     void Start()
     {
         dataController = FindObjectOfType<DataController>();
+
+        // data from database
+        // WebRequest web = new WebRequest();
+        // currentRoundData = WebRequest.currentRoundData;
+
+        //data from local json file
         currentRoundData = dataController.GetCurrentRoundData();
+        
         questionPool = currentRoundData.questions;
 
         timeRemaining = currentRoundData.timeLimitInSeconds;
@@ -78,8 +85,18 @@ public class GameController : MonoBehaviourPunCallbacks, IPunObservable
                  }else{
                     playerScore += currentRoundData.pointAddedForCorrectAnswer*(int)Mathf.Round (timeRemaining);
                     scoreDisplayText.text = "Score: " + playerScore.ToString();
-                        }           
+                        }   
+
+            // 
+            if(PlayerInfo.playerInfo!=null){
+               PlayerInfo.playerInfo.currentScore = playerScore;
+               PlayerPrefs.SetInt("myScore",playerScore);
+            }
+            
+
         }
+
+
     }
 
     public void EndRound(){

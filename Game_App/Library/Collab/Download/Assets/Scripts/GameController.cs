@@ -78,8 +78,18 @@ public class GameController : MonoBehaviourPunCallbacks, IPunObservable
                  }else{
                     playerScore += currentRoundData.pointAddedForCorrectAnswer*(int)Mathf.Round (timeRemaining);
                     scoreDisplayText.text = "Score: " + playerScore.ToString();
-                        }           
+                        }   
+
+            // 
+            if(PlayerInfo.playerInfo!=null){
+               PlayerInfo.playerInfo.currentScore = playerScore;
+               PlayerPrefs.SetInt("MyCharacter",playerScore);
+            }
+            
+
         }
+
+
     }
 
     public void EndRound(){
