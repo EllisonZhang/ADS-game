@@ -72,7 +72,7 @@ public class WebRequest : MonoBehaviour
         form.AddField("loginUser", username);
         form.AddField("loginPassword", password);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/UnityBackEnd/Login.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://weikunzhang.000webhostapp.com/Login.php", form))
         {
             yield return www.SendWebRequest();
 
@@ -102,7 +102,7 @@ public class WebRequest : MonoBehaviour
         form.AddField("loginUser", username);
         form.AddField("loginPassword", password);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/UnityBackEnd/PlayerDataRetrieve.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://weikunzhang.000webhostapp.com/PlayerDataRetrieve.php", form))
         {
             yield return www.SendWebRequest();
 
@@ -128,7 +128,7 @@ public class WebRequest : MonoBehaviour
         form.AddField("loginUser", username);
         form.AddField("loginPassword", password);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/UnityBackEnd/Register.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://weikunzhang.000webhostapp.com/Register.php", form))
         {
             yield return www.SendWebRequest();
 
@@ -151,7 +151,7 @@ public class WebRequest : MonoBehaviour
         form.AddField("rankLevel", rankLevel);
         form.AddField("money", money);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/UnityBackEnd/UpdateUser.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://weikunzhang.000webhostapp.com/UpdateUser.php", form))
         {
             yield return www.SendWebRequest();
 
@@ -174,7 +174,7 @@ public class WebRequest : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("questionLevel", questionLevel);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/UnityBackEnd/GetQuestions.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://weikunzhang.000webhostapp.com/GetQuestions.php", form))
         {
             yield return www.SendWebRequest();
 
@@ -186,6 +186,7 @@ public class WebRequest : MonoBehaviour
             {
                 // Debug.Log(www.downloadHandler.text);
                 rawGameData = www.downloadHandler.text;  
+                PlayerPrefs.SetString("rawGameData",rawGameData);
                 LoadQuestionFromDatabase();  
             }
         }
@@ -210,9 +211,8 @@ public class WebRequest : MonoBehaviour
         }
 
         string[] rawData = rawGameData.Split('@');
-
         currentRoundData.pointAddedForCorrectAnswer = 10;
-        currentRoundData.timeLimitInSeconds = 10;
+        currentRoundData.timeLimitInSeconds = 5;
         currentRoundData.questions = questionDatas;
 
 

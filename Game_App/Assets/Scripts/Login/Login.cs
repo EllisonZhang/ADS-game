@@ -32,7 +32,7 @@ public class Login : MonoBehaviour
     }
 
     public void CreateAccountButtonClicked(){
-
+        
         logInPage.SetActive(false);
         createAccountPage.SetActive(true);
     }

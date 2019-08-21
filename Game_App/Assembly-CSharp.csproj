@@ -175,12 +175,14 @@
      <Compile Include="Assets\Scripts\Login\Login.cs" />
      <Compile Include="Assets\Scripts\Login\Main.cs" />
      <Compile Include="Assets\Scripts\MenuScreenController.cs" />
+     <Compile Include="Assets\Scripts\NetworkAnswerButton.cs" />
      <Compile Include="Assets\Scripts\Photon\GameSetup.cs" />
+     <Compile Include="Assets\Scripts\Photon\MatchController.cs" />
+     <Compile Include="Assets\Scripts\Photon\MatchUIController.cs" />
      <Compile Include="Assets\Scripts\Photon\PhotonLobby.cs" />
      <Compile Include="Assets\Scripts\Photon\PhotonPlayer.cs" />
      <Compile Include="Assets\Scripts\Photon\PhotonRoom.cs" />
      <Compile Include="Assets\Scripts\Photon\PlayerInfo.cs" />
-     <Compile Include="Assets\Scripts\Photon\PlayerScore.cs" />
      <Compile Include="Assets\Scripts\PlayerData.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\QuestionData.cs" />

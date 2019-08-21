@@ -1627,7 +1627,9 @@ MonoBehaviour:
   highestScore: 0
   userName: 
   rankLevel: 0
+  levelInText: 
   money: 0
+  questionLevel: 0
   rawData: 
   managedData: []
 --- !u!1 &1041354211
@@ -2236,7 +2238,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.0998535, y: -119.670044}
+  m_AnchoredPosition: {x: 3.1, y: -119.67}
   m_SizeDelta: {x: 740.2, y: 761}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1447388379
@@ -2888,7 +2890,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.1, y: -119.67}
+  m_AnchoredPosition: {x: 3.1, y: -103}
   m_SizeDelta: {x: 740.2, y: 761}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2057798762

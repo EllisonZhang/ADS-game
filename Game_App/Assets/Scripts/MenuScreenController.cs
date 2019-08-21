@@ -17,7 +17,7 @@ public class MenuScreenController : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("MultipleGame");
     }
 
     public void SetUserName(){

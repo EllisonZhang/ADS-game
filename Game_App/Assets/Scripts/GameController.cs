@@ -52,7 +52,7 @@ public class GameController : MonoBehaviourPunCallbacks, IPunObservable
 
     private void ShowQuestion(){    
         // for each question, player has 10s to answer
-        timeRemaining = 10;
+        timeRemaining = 15;
         RemoveAnswerButtons();
         QuestionData questionData = questionPool[questionIndex];
         questionDisplayText.text = questionData.questionText;
@@ -81,22 +81,18 @@ public class GameController : MonoBehaviourPunCallbacks, IPunObservable
             //the final question worth double marks
             if(questionPool.Length == questionIndex+1){
                     playerScore += 2*currentRoundData.pointAddedForCorrectAnswer*(int)Mathf.Round (timeRemaining);
-                    scoreDisplayText.text = "Score: " + playerScore.ToString();
+                    scoreDisplayText.text = playerScore.ToString();
                  }else{
                     playerScore += currentRoundData.pointAddedForCorrectAnswer*(int)Mathf.Round (timeRemaining);
-                    scoreDisplayText.text = "Score: " + playerScore.ToString();
+                    scoreDisplayText.text = playerScore.ToString();
                         }   
 
-            // 
             if(PlayerInfo.playerInfo!=null){
                PlayerInfo.playerInfo.currentScore = playerScore;
                PlayerPrefs.SetInt("myScore",playerScore);
             }
             
-
         }
-
-
     }
 
     public void EndRound(){
@@ -114,7 +110,7 @@ public class GameController : MonoBehaviourPunCallbacks, IPunObservable
 
     private void UpdataTimeRemainingDisplay(){
       
-        timeDisplayText.text = "Time: " + Mathf.Round (timeRemaining).ToString();
+        timeDisplayText.text =  Mathf.Round (timeRemaining).ToString();
 
     }
     // Update is called once per frame

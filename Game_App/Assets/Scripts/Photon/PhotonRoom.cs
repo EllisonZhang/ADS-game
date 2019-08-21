@@ -21,7 +21,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     // Start is called before the first frame update
     private void Awake() {
         
-        if(room == null){
+        if(PhotonRoom.room == null){
             PhotonRoom.room = this;
         }else{
 
@@ -35,6 +35,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     void Start()
     {
         PV = GetComponent<PhotonView>();
+        
     }
 
     public override void OnEnable(){
@@ -75,7 +76,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         }
 
         // PhotonNetwork.LoadLevel(multiplayerScene);
-        PhotonNetwork.LoadLevel(3);
+        PhotonNetwork.LoadLevel(4);
     }
     public override void OnPlayerEnteredRoom(Player otherPlayer){
         Debug.Log("PLayer entered room");
@@ -90,6 +91,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         currentScene = scene.buildIndex;
         if(currentScene == multiplayerScene){
             CreatePlayer();
+            
         }
     }
 

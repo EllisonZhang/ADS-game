@@ -42,6 +42,13 @@ public class PlayerData : MonoBehaviour
         money =  int.Parse(managedData[2]);
     }
 
+    public void SetUpPlayerPrefs(string userName,int rankLevel, int money,int questionLevel){
+        PlayerPrefs.SetString("userName",userName);
+        PlayerPrefs.SetInt("rankLevel",rankLevel);
+        PlayerPrefs.SetInt("money",money);
+        PlayerPrefs.SetInt("questionLevel",questionLevel);
+    }
+
     public void QuestionLevelGenerate(){
 
         if(rankLevel<2){
@@ -74,6 +81,7 @@ public class PlayerData : MonoBehaviour
             levelInText = "King";
         }
 
+        SetUpPlayerPrefs(this.userName,this.rankLevel,this.money,this.questionLevel);
     }
 
 }

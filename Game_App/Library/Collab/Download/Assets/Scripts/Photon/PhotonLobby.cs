@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using System.IO;
 
 public class PhotonLobby : MonoBehaviourPunCallbacks
 {
@@ -18,12 +19,14 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     void Start()
     {
         PhotonNetwork.ConnectUsingSettings(); // connect to Master photon server
-        PhotonNetwork.AutomaticallySyncScene = true;   
+        
     }
 
     public override void OnConnectedToMaster(){
 
             Debug.Log("Player has connected to Photon server");
+            PhotonNetwork.AutomaticallySyncScene = true;   
+            PhotonNetwork.NickName = "Player" + Random.Range(0,100);
             battleButton.SetActive(true);       
     }
 
@@ -35,12 +38,12 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRandomRoom();
 
     }
-    private void LoadArena(){
-        if (!PhotonNetwork.IsMasterClient){
-            Debug.LogError("PhotonNetwork: Tring to load level, but we are not master client");
-        }
-        PhotonNetwork.LoadLevel("Game");
-    }
+    // private void LoadArena(){
+    //     if (!PhotonNetwork.IsMasterClient){
+    //         Debug.LogError("PhotonNetwork: Tring to load level, but we are not master client");
+    //     }
+    //     PhotonNetwork.LoadLevel("Game");
+    // }
 
     public override void OnJoinRandomFailed(short returnCode, string message){
         Debug.Log("no room available, trying to created a new room");
@@ -50,7 +53,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     public void CreateRoom(){
         int randomRoomName = Random.Range(0,10000);
         RoomOptions roomOptions = new RoomOptions(){
-            IsVisible = true, IsOpen = true, MaxPlayers = 10
+            IsVisible = true, IsOpen = true, MaxPlayers = 2
         };
 
         PhotonNetwork.CreateRoom("Room"+randomRoomName,roomOptions);
@@ -80,15 +83,19 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
 
 
 // after player matching in the same room. show the game scene/arena
-public override void OnPlayerEnteredRoom(Player otherPlayer){
-    Debug.Log("PLayer entered room");
+// public override void OnPlayerEnteredRoom(Player otherPlayer){
+//     Debug.Log("PLayer entered room");
 
-    if(PhotonNetwork.IsMasterClient){
-        Debug.Log("PLayer entered MasterClient room");
-        LoadArena();
-    }
-}
+//     if(PhotonNetwork.IsMasterClient){
+//         Debug.Log("PLayer entered MasterClient room");
+//         LoadArena();
+//     }
+// }
+    private void CreatePlayer(){
 
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs","PhotonNetWorkPlayer"),
+            transform.position,Quaternion.identity,0);
+    }   
     public override void OnLeftRoom(){
         Debug.Log("room left");
     }
